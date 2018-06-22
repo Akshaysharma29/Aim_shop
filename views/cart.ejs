@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="background: pink">
+    <div class="container" style="margin: 0px auto; width: 50%; border:1px solid gray; border-radius: 3px">
+        
+            <table style="width: 50%; margin: 0px auto">
+                <thead>
+                        <tr>
+                                <th>ITEM</th>
+                                <th>PRICE</th> 
+                                <th>Quantity</th>
+                                <th>AMOUNT</th>
+
+                        </tr>
+                </thead>
+                <tbody>
+                        <% var temp=0 %>
+                        <%  for(var i=0;i<cart.length;i++){ temp +=cart[i].price*cart[i].quantity  %>
+                            <tr>
+                                <td><%= cart[i].title %></td>
+                                <td><%= cart[i].price %></td>
+                                <td><%= cart[i].quantity %></td>
+                                <td><%= cart[i].price*cart[i].quantity %></td>
+
+                            </tr> 
+                             <% } %>
+                             <b>TOTAL =  <%= temp %></b>
+                            
+                </tbody>
+            </table>
+          
+    </div>
+</body>
+</html>
